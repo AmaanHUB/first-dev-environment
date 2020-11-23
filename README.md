@@ -45,3 +45,34 @@ vagrant ssh
 ```
 vagrant suspend
 ```
+
+* Create a private network with an IP address to connect to:
+```ruby
+Vagrant.configure("2") do |config|
+
+# config.vm.network "private_network", ip: "ip_address"
+  config.vm.network "private_network", ip: "192.168.33.10"
+```
+
+* Reload the VM without deleting it:
+```
+vagrant reload
+```
+
+* Assign the IP as an easy to remember URL
+	* First install the `hostsupdater` plugin:
+```
+vagrant plugin install hostspluginupdater
+```
+	* Add to the `Vagrantfile` to call the plugin and direct where you want it to point (can be underneath the private network section):
+```ruby
+  config.vm.hostname = "development.local"
+```
+		* N.B. This changes the host machines /etc/hosts so requires the sudo password. It should be deleted from this when the machine is destroyed or suspened, unless specified otherwise
+
+### Simple Commands In Ubuntu
+
+* Update and upgrade:
+```sudo apt update && sudo apt upgrade```
+
+*
