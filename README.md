@@ -42,6 +42,6 @@ vagrant ssh
 ```
 
 * Suspend the machine with:
-```shell
+```sh
 vagrant suspend
 ```
