@@ -36,7 +36,12 @@ vagrant up
 vagrant destroy
 ```
 
-* Access the machine with ssh
+* To access the machine with ssh:
 ```sh
 vagrant ssh
+```
+
+* Suspend the machine with:
+```shell
+vagrant suspend
 ```
