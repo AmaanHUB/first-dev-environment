@@ -59,17 +59,17 @@ Vagrant.configure("2") do |config|
 vagrant reload
 ```
 
-* Assign the IP as an easy to remember URL
+#### Assign the IP as an easy to remember URL
 	* First install the `hostsupdater` plugin:
 ```
 vagrant plugin install hostspluginupdater
 ```
-	* Add to the `Vagrantfile` to call the plugin and direct where you want it to point (can be underneath the private network section):
+* Add to the `Vagrantfile` to call the plugin and direct where you want it to point (can be underneath the private network section):
 ```ruby
 # config.vm.hostname = "url_to_point_to"
   config.vm.hostname = "development.local"
 ```
-		* N.B. This changes the host machines /etc/hosts so requires the sudo password. It should be deleted from this when the machine is destroyed or suspened, unless specified otherwise
+* N.B. This changes the host machines /etc/hosts so requires the sudo password. It should be deleted from this when the machine is destroyed or suspened, unless specified otherwise
 
 ### Simple Commands In Ubuntu
 
