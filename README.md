@@ -66,13 +66,19 @@ vagrant plugin install hostspluginupdater
 ```
 	* Add to the `Vagrantfile` to call the plugin and direct where you want it to point (can be underneath the private network section):
 ```ruby
+# config.vm.hostname = "url_to_point_to"
   config.vm.hostname = "development.local"
 ```
 		* N.B. This changes the host machines /etc/hosts so requires the sudo password. It should be deleted from this when the machine is destroyed or suspened, unless specified otherwise
 
 ### Simple Commands In Ubuntu
 
+* Basic Linux package manager stuff really with `apt`
+	* See Ubuntu man pages:
+	* `man apt`
 * Update and upgrade:
-```sudo apt update && sudo apt upgrade```
+```
+sudo apt update && sudo apt upgrade
+```
 
-*
+* Install (using install instead)
