@@ -81,4 +81,4 @@ vagrant plugin install hostspluginupdater
 sudo apt update && sudo apt upgrade
 ```
 
-* Install (using install instead)
+* Install (using install instead of update/upgrade)
