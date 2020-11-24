@@ -59,6 +59,11 @@ Vagrant.configure("2") do |config|
 vagrant reload
 ```
 
+* To upload files to the VM (easily):
+```
+vagrant upload source destination
+```
+
 #### Assign the IP as an easy to remember URL
 	* First install the `hostsupdater` plugin:
 ```
